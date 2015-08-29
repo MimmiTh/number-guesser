@@ -10,12 +10,14 @@ def index():
 
 @app.route('/guess/<int:min>/<int:max>/<int:count>')
 def guess(min, max, count):
-	count+=1
 	guess = int(math.floor((min + max) / 2))
 
-	lowerLink = '/guess/{min}/{max}/{count}'.format(min = min, max = (guess-1), count = count)
-	higherLink = '/guess/{min}/{max}/{count}'.format(min = (guess+1), max = max, count = count)
+	lowerLink = '/guess/{min}/{max}/{count}'.format(min = min, max = (guess-1), count = count+1)
+	higherLink = '/guess/{min}/{max}/{count}'.format(min = (guess+1), max = max, count = count+1)
 	successLink = '/success/{count}'.format(count = count)
+
+	if min > max:
+		return render_template('error.html')
 
 	return render_template('guess.html', guess = guess, lowerLink = lowerLink, higherLink = higherLink, successLink = successLink)
 
