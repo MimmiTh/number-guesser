@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1>Is your number...</h1>
+	<h2>{{ guess }}?</h2>
+	<div class="buttons">
+		<a href="{{ lowerLink }}" id="lower-button">No, my number is lower</a>
+		<a href="{{ successLink }}" id="correct-button">Yes, that's my number</a>
+		<a href="{{ higherLink }}" id="higher-button">No, my number is higher</a>
+	</div>
+{% endblock %}
