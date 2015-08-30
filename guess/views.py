@@ -1,4 +1,4 @@
-from app import app
+from guess import app
 from flask import request
 from flask import render_template
 import math
