@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-	<h1>I guessed your number in {{ count }} tries!</h1>
+	{% if plural %}
+		<h1>I guessed your number in {{ count }} tries!</h1>
+	{% else %}
+		<h1>I guessed your number in {{ count }} try!</h1>
+	{% endif %}
 	<a href="/">Try again</a>
 {% endblock %}

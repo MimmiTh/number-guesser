@@ -3,8 +3,8 @@
 	<h1>Is your number...</h1>
 	<h2>{{ guess }}?</h2>
 	<div class="buttons">
-		<a href="{{ lowerLink }}" id="lower-button">No, my number is lower</a>
-		<a href="{{ successLink }}" id="correct-button">Yes, that's my number</a>
-		<a href="{{ higherLink }}" id="higher-button">No, my number is higher</a>
+		<a href="{{ lowerLink }}" class="button" id="lower">No, my number is <b>lower</b></a>
+		<a href="{{ successLink }}" class="button" id="success">Yes, that is my number</a>
+		<a href="{{ higherLink }}" class="button" id="higher">No, my number is <b>higher</b></a>
 	</div>
 {% endblock %}

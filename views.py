@@ -23,4 +23,4 @@ def guess(min, max, count):
 
 @app.route('/success/<int:count>')
 def success(count):
-	return render_template('success.html', count = count)
+	return render_template('success.html', count = count, plural = count != 1)
